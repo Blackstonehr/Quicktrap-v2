@@ -1,42 +1,69 @@
-import ProductLayout from "../components/sections/Product/ProductLayout";
-import ProductSidebar from "../components/sections/Product/ProductSidebar";
-import ProductHero from "../components/sections/Product/ProductHero";
-import ProductRender from "../components/sections/Product/ProductRender";
-import ProductSpecs from "../components/sections/Product/ProductSpecs";
-import ProductCerts from "../components/sections/Product/ProductCerts";
+import ProductHero from '../components/sections/Product/ProductHero';
+import ProductLayout from '../components/sections/Product/ProductLayout';
+import ProductSidebar from '../components/sections/Product/ProductSidebar';
+import ProductRender from '../components/sections/Product/ProductRender';
+import ProductSpecs from '../components/sections/Product/ProductSpecs';
+import ProductCerts from '../components/sections/Product/ProductCerts';
+import CTASection from '../components/CTASection';
+import SEO from '../components/SEO';
 
-export default function Product() {
+const Product = () => {
   return (
-    <>
-      <ProductHero
-        title="Quicktrap Stormwater Device"
-        subtitle="Engineered for high-flow performance and municipal-grade reliability."
-        image="/images/hero_concrete.png"
+    <div>
+      <SEO
+        title="Quicktrap Series 1 - Product Details"
+        description="Explore the technical specifications and features of the Quicktrap Series 1 catch basin filter."
+        canonical="https://quicktrap.ca/product"
       />
 
-      <ProductLayout sidebar={<ProductSidebar />}>
-        
-        <section id="overview" className="mb-20">
-          <h2 className="text-2xl font-bold text-graphite mb-4">Overview</h2>
-          <p className="text-steel leading-relaxed text-sm max-w-2xl">
-            Quicktrap is a high-performance stormwater management insert designed 
-            to reduce sediment flow, prevent blockage, and increase the lifespan 
-            of municipal drainage systems.
+      <ProductHero
+        title="Quicktrap Series 1"
+        subtitle="Premium catch basin filter engineered for maximum performance and reliability"
+        image="/images/hero_grate.png"
+      />
+
+      <ProductLayout
+        sidebar={
+          <ProductSidebar />
+        }
+      >
+        <section id="overview" className="scroll-mt-24">
+          <h2 className="text-3xl font-bold text-brand mb-6">Product Overview</h2>
+          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            The Quicktrap Series 1 is our flagship catch basin filter, designed for maximum debris retention
+            without compromising flow rates. Engineered for municipal and commercial applications, it features
+            a durable stainless steel construction and a patented bypass system.
           </p>
+          <ProductRender />
         </section>
 
-        <ProductRender />
         <ProductSpecs />
+
         <ProductCerts />
 
-        <section id="install" className="mb-20">
-          <h2 className="text-2xl font-bold text-graphite mb-4">Installation</h2>
-          <p className="text-steel text-sm leading-relaxed max-w-xl">
-            Installs directly into standard catch-basin structures with minimal 
-            tooling. A full installation guide will be provided in Phase 4.
+        <section id="installation" className="scroll-mt-24 mb-12">
+          <h2 className="text-3xl font-bold text-brand mb-6">Installation</h2>
+          <p className="text-lg text-gray-700 mb-6">
+            Quicktrap is designed for rapid deployment. Most units can be installed in under 15 minutes
+            without the need for heavy machinery or specialized tools.
           </p>
+          <div className="bg-concrete p-6 rounded-lg border border-gray-200">
+            <p className="font-semibold text-brand mb-2">Installation Guide Available</p>
+            <a href="/installation" className="text-brand-accent hover:underline">
+              View full installation instructions →
+            </a>
+          </div>
         </section>
       </ProductLayout>
-    </>
+
+      <CTASection
+        title="Ready to Order?"
+        description="Contact our sales team for pricing and bulk order discounts."
+        primaryButtonText="Get a Quote"
+        primaryButtonLink="/contact"
+      />
+    </div>
   );
-}
+};
+
+export default Product;

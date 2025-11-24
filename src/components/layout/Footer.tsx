@@ -6,8 +6,8 @@ export default function Footer() {
       <Container className="grid grid-cols-1 md:grid-cols-3 gap-16">
 
         <div>
-          <img src="/images/logo_wordmark.png" className="h-12 mb-6" alt="Quicktrap" />
-          <p className="text-steel text-sm leading-relaxed">
+          <img src="/images/logo_modern.png" className="h-12 mb-6 brightness-0 invert" alt="Quicktrap" />
+          <p className="text-white/70 text-sm leading-relaxed">
             Engineered stormwater solutions for municipal and commercial infrastructure.
           </p>
         </div>
