@@ -8,7 +8,7 @@
   --color-concrete: #f8f9fa;
   --color-blueprint: #0056b3;
   --color-blueprint-dark: #004494;
-  --color-steel: #6c757d;
+  --color-steel: #495057;
   --color-brand-accent: #a31621;
   --color-water-blue: #e0f7fa;
   
@@ -26,17 +26,9 @@
   --spacing-card-gap: 2rem;
   --spacing-inner: 2rem;
   
-  /* Border Radius */
-  --radius-sm: 0.5rem;
-  --radius-card: 1rem;
-  --radius-lg: 1.5rem;
-  --radius-full: 9999px;
-  
-  /* Box Shadows */
-  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  --shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
-  --shadow-card-hover: 0 20px 40px -5px rgba(0, 0, 0, 0.12);
-  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+*:focus-visible {
+  outline: 2px solid var(--color-brand-accent);
+  outline-offset: 2px;
 }
 
 /* Base Styles */
@@ -77,8 +69,8 @@ p {
 /* Glassmorphism Utilities */
 .glass-panel {
   background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: var(--shadow-glass);
 }
@@ -90,24 +82,27 @@ p {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Custom Utilities */
-@utility text-hero {
+/* Custom Utilities - Using standard CSS classes */
+.text-hero {
   font-size: var(--font-size-hero);
   line-height: 1.1;
   letter-spacing: -0.03em;
   font-weight: 800;
 }
 
-@utility text-gradient-blue {
+.text-gradient-blue {
   background: linear-gradient(135deg, var(--color-blueprint-dark), var(--color-blueprint));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-@utility card-hover-effect {
+.card-hover-effect {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-card-hover);
-  }
+}
+
+
+.card-hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
 }

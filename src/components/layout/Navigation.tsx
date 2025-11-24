@@ -15,7 +15,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="w-full border-b border-concrete bg-white/95 backdrop-blur-sm fixed top-0 left-0 z-50">
+    <nav className="w-full border-b border-concrete bg-white/95 backdrop-blur-sm fixed top-0 left-0 z-50 shadow-md">
       <Container className="flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center">
           <img src="/images/logo_modern.png" alt="Quicktrap" className="h-10 w-auto" />
@@ -28,7 +28,7 @@ export default function Navigation() {
                 key={item.path}
                 to={item.path}
                 className={`
-                  relative pb-1 transition text-[15px]
+                  relative pb-1 transition-colors duration-200 text-[15px] hover:text-graphite
                   ${active ? "text-graphite" : "text-steel"}
                 `}
               >

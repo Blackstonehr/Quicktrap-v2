@@ -130,7 +130,7 @@ export default function HeroEnhanced({
                 {defaultStats.map((stat, index) => (
                   <div key={index} className="text-center p-4 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
                     <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-xs text-white/60 uppercase tracking-wider">{stat.label}</div>
+                    <div className="text-xs text-white/75 uppercase tracking-wider">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -146,7 +146,7 @@ export default function HeroEnhanced({
         transition={{ delay: 1, duration: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
-        <div className="flex flex-col items-center gap-2 text-white/40">
+        <div className="flex flex-col items-center gap-2 text-white/60">
           <span className="text-[10px] font-medium tracking-[0.2em] uppercase">Scroll</span>
           <ChevronDown className="w-5 h-5 animate-bounce" />
         </div>
