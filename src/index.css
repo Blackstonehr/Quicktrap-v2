@@ -25,7 +25,9 @@
   --spacing-section-lg: 8rem;
   --spacing-card-gap: 2rem;
   --spacing-inner: 2rem;
-  
+}
+
+/* Focus States */
 *:focus-visible {
   outline: 2px solid var(--color-brand-accent);
   outline-offset: 2px;
